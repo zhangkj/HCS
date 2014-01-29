@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A74976E-4F7F-4D9F-BBE0-04596287EB0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCS</RootNamespace>
+    <AssemblyName>HCS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\ModuleBase.cs" />
+    <Compile Include="BaseInfo\ExpenseItemsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ExpenseItemsEdit.Designer.cs">
+      <DependentUpon>ExpenseItemsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\SectionInfoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\SectionInfoEdit.Designer.cs">
+      <DependentUpon>SectionInfoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ExpenseItemsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ExpenseItemsList.Designer.cs">
+      <DependentUpon>ExpenseItemsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\DoctorInfoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\DoctorInfoEdit.Designer.cs">
+      <DependentUpon>DoctorInfoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ItemStandardEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ItemStandardEdit.Designer.cs">
+      <DependentUpon>ItemStandardEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ItemUnitEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ItemUnitEdit.Designer.cs">
+      <DependentUpon>ItemUnitEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSAdmin.Designer.cs">
+      <DependentUpon>HCSAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSLogin.Designer.cs">
+      <DependentUpon>HCSLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsManagement\ChangeAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsManagement\ChangeAmount.Designer.cs">
+      <DependentUpon>ChangeAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsManagement\ExpenseInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsManagement\ExpenseInput.Designer.cs">
+      <DependentUpon>ExpenseInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsManagement\PatientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsManagement\PatientList.Designer.cs">
+      <DependentUpon>PatientList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsManagement\PatientInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsManagement\PatientInfoList.Designer.cs">
+      <DependentUpon>PatientInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsManagement\ExpenseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsManagement\ExpenseList.Designer.cs">
+      <DependentUpon>ExpenseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsManagement\ExpenseEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsManagement\ExpenseEdit.Designer.cs">
+      <DependentUpon>ExpenseEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaseInfo\ExpenseItemsEdit.resx">
+      <DependentUpon>ExpenseItemsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInfo\SectionInfoEdit.resx">
+      <DependentUpon>SectionInfoEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInfo\ExpenseItemsList.resx">
+      <DependentUpon>ExpenseItemsList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInfo\DoctorInfoEdit.resx">
+      <DependentUpon>DoctorInfoEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInfo\ItemStandardEdit.resx">
+      <DependentUpon>ItemStandardEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInfo\ItemUnitEdit.resx">
+      <DependentUpon>ItemUnitEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSAdmin.resx">
+      <DependentUpon>HCSAdmin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSLogin.resx">
+      <DependentUpon>HCSLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsManagement\ChangeAmount.resx">
+      <DependentUpon>ChangeAmount.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsManagement\ExpenseInput.resx">
+      <DependentUpon>ExpenseInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsManagement\PatientList.resx">
+      <DependentUpon>PatientList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsManagement\PatientInfoList.resx">
+      <DependentUpon>PatientInfoList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsManagement\ExpenseList.resx">
+      <DependentUpon>ExpenseList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsManagement\ExpenseEdit.resx">
+      <DependentUpon>ExpenseEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptFiles\RptSectionFigureByDay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSectionFigureByDay.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptFiles\RptSectionFigureByMonth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSectionFigureByMonth.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptFiles\RptSectionFigureByYear.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSectionFigureByYear.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptFiles\RptPatientExpenseByDay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptPatientExpenseByDay.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptFiles\RptPatientExpenseByMonth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptPatientExpenseByMonth.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptFiles\RptPatientExpenseByYear.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptPatientExpenseByYear.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptFiles\RptSectionWorkByDay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSectionWorkByDay.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptFiles\RptSectionWorkByMonth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSectionWorkByMonth.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptFiles\RptSectionWorkByYear.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSectionWorkByYear.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptStatistics\RptPatientExpense.resx">
+      <DependentUpon>RptPatientExpense.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptStatistics\RptSectionFigures.resx">
+      <DependentUpon>RptSectionFigures.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptStatistics\RptSectionstatistics.resx">
+      <DependentUpon>RptSectionstatistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptStatistics\RptShow.resx">
+      <DependentUpon>RptShow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RptFiles\RptSectionFigureByDay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSectionFigureByDay.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptFiles\RptSectionFigureByMonth.cs">
+      <DependentUpon>RptSectionFigureByMonth.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RptFiles\RptSectionFigureByYear.cs">
+      <DependentUpon>RptSectionFigureByYear.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RptFiles\RptPatientExpenseByDay.cs">
+      <DependentUpon>RptPatientExpenseByDay.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RptFiles\RptPatientExpenseByMonth.cs">
+      <DependentUpon>RptPatientExpenseByMonth.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RptFiles\RptPatientExpenseByYear.cs">
+      <DependentUpon>RptPatientExpenseByYear.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RptFiles\RptSectionWorkByDay.cs">
+      <DependentUpon>RptSectionWorkByDay.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RptFiles\RptSectionWorkByMonth.cs">
+      <DependentUpon>RptSectionWorkByMonth.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RptFiles\RptSectionWorkByYear.cs">
+      <DependentUpon>RptSectionWorkByYear.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RptStatistics\RptSectionstatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptStatistics\RptSectionstatistics.Designer.cs">
+      <DependentUpon>RptSectionstatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptStatistics\RptPatientExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptStatistics\RptPatientExpense.Designer.cs">
+      <DependentUpon>RptPatientExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptStatistics\RptSectionFigures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptStatistics\RptSectionFigures.Designer.cs">
+      <DependentUpon>RptSectionFigures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptStatistics\RptShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptStatistics\RptShow.Designer.cs">
+      <DependentUpon>RptShow.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\tool_Date.gif" />
+    <Content Include="Images\tool_customer.gif" />
+    <Content Include="Images\tool_Finance.gif" />
+    <Content Include="Images\tool_Office.gif" />
+    <Content Include="Images\tool_Select.gif" />
+    <Content Include="Images\tool_peoples .gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HCSBLL\HCSBLL.csproj">
+      <Project>{766848D9-F216-410A-B24E-6B066FECA49C}</Project>
+      <Name>HCSBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HCSModels\HCSModels.csproj">
+      <Project>{9F74DA4B-FD0F-41F4-B36B-C267E31755B6}</Project>
+      <Name>HCSModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
